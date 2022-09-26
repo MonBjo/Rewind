@@ -1,0 +1,28 @@
+{
+  "games": [
+    {
+      "type": "Fotboll",
+      "date": "2022-09-10",
+      "players": [
+          {
+              "name": "Samantha", 
+              "won": true,
+              "point": 5
+          },{
+            "name": "Jack", 
+            "won": false,
+            "point": 4
+        },{
+          "name": "Daniel", 
+          "won": false,
+          "point": 2
+      },{
+        "name": "Teal'c", 
+        "won": true,
+        "point": 5
+    }
+      ],
+      "id": 0
+    }
+  ]
+}

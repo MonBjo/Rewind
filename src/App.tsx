@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {Routes, Route} from 'react-router-dom';
-import './App.css';
+import './App.scss';
 
 import LandingPage from "./views/LandingPage";
 import Error from "./views/Error";

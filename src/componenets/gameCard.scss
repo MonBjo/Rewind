@@ -1,0 +1,32 @@
+.gameCard {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #00000072;
+  // min-width: 200px;
+  width: 80%;
+  max-width: 500px;
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  header {
+    background-color: lightgray;
+    box-shadow: 0 2px 5px 2px lightgray;
+  }
+  header, section {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .edit {
+    font-style: italic;
+    color: gray;
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+}

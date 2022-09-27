@@ -9,7 +9,7 @@ function Header() {
   }
 
   return (
-    <header>
+    <header className="header">
       <p>Header</p>
     </header>
   );

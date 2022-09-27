@@ -1,9 +1,10 @@
 import './gameCard.scss';
 import data from '../assets/games.json';
 
-function GameCard() {
-  console.log(data);
-
+function GameCard(prop: object) {
+  console.log("prop",prop);
+  console.log("data", data);
+  
   // TODO: Create function to display the info
   // TODO: Create a function to put the winner/s at the top
   // TODO: Create a function that sorts the players by points. 

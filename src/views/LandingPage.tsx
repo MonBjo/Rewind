@@ -1,5 +1,6 @@
 import Header from '../componenets/Header';
 import GameCard from '../componenets/GameCard';
+import data from '../assets/games.json';
 
 function LandingPage() {
 
@@ -7,7 +8,7 @@ function LandingPage() {
     <section className="LandingPage page">
       <Header />
       <p>Landingpage</p>
-      <GameCard />
+      <GameCard gamesData={data.games} />
     </section>
   );
 }

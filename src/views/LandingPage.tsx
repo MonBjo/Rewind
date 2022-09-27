@@ -1,4 +1,5 @@
 import Header from '../componenets/Header';
+import GameCard from '../componenets/GameCard';
 
 function LandingPage() {
 
@@ -6,6 +7,7 @@ function LandingPage() {
     <section className="LandingPage page">
       <Header />
       <p>Landingpage</p>
+      <GameCard />
     </section>
   );
 }

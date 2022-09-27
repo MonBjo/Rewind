@@ -2,27 +2,119 @@
   "games": [
     {
       "type": "Fotboll",
+      "date": "2022-09-03",
+      "players": [
+        {
+          "name": "Samantha", 
+          "won": true,
+          "point": 5,
+          "id": 0
+        },{
+          "name": "Jack", 
+          "won": false,
+          "point": 4,
+          "id": 1
+          },{
+          "name": "Daniel", 
+          "won": false,
+          "point": 2,
+          "id": 2
+        },{
+          "name": "Teal'c", 
+          "won": true,
+          "point": 5,
+          "id": 3
+        }
+      ],
+      "id": 0
+    },{
+      "type": "Fotboll",
       "date": "2022-09-10",
       "players": [
-          {
-              "name": "Samantha", 
-              "won": true,
-              "point": 5
-          },{
-            "name": "Jack", 
-            "won": false,
-            "point": 4
+        {
+          "name": "Samantha", 
+          "won": false,
+          "point": 1,
+          "id": 0
+        },{
+          "name": "Jack", 
+          "won": false,
+          "point": 4,
+          "id": 1
         },{
           "name": "Daniel", 
           "won": false,
-          "point": 2
-      },{
-        "name": "Teal'c", 
-        "won": true,
-        "point": 5
-    }
+          "point": 2,
+          "id": 2
+        },{
+          "name": "Teal'c", 
+          "won": true,
+          "point": 5,
+          "id": 3
+        }
       ],
-      "id": 0
+      "id": 2
+    },{
+      "type": "Fotboll",
+      "date": "2022-09-12",
+      "players": [
+        {
+          "name": "Samantha", 
+          "won": false,
+          "point": 0,
+          "id": 0
+        },{
+          "name": "Jack", 
+          "won": false,
+          "point": 0,
+          "id": 1
+        },{
+          "name": "Daniel", 
+          "won": false,
+          "point": 0,
+          "id": 2
+        },{
+          "name": "Teal'c", 
+          "won": false,
+          "point": 0,
+          "id": 3
+        }
+      ],
+      "id": 3
+    },{
+      "type": "Schack",
+      "date": "2022-09-02",
+      "players": [
+        {
+          "name": "Samantha", 
+          "won": false,
+          "point": 0,
+          "id": 0
+        },{
+          "name": "Daniel", 
+          "won": true,
+          "point": 1,
+          "id": 1
+        }
+      ],
+      "id": 4
+    },{
+      "type": "Schack",
+      "date": "2022-09-01",
+      "players": [
+        {
+          "name": "Samantha", 
+          "won": false,
+          "point": 0,
+          "id": 0
+        },{
+          "name": "Daniel", 
+          "won": true,
+          "point": 1,
+          "id": 1
+        }
+      ],
+      "id": 5
     }
   ]
 }

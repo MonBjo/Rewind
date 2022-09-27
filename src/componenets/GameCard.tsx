@@ -1,6 +1,5 @@
 import './gameCard.scss';
 import data from '../assets/games.json';
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
 
 function GameCard(props: { type: string; date: string; players: any; }) {
   let {type, date, players} = props;
@@ -11,6 +10,9 @@ function GameCard(props: { type: string; date: string; players: any; }) {
   //    If the winner has the highest score, sort from lowest to highest.
   //    If the winner has the lowest score, sort from highest to lowest.
   
+  players.sort((a: { point: number; },b: { point: number; }) => a.point + b.point);
+  console.log("sort?", players);
+
   return (
     <section className="gameCard">
       <header>

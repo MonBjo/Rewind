@@ -9,7 +9,6 @@ function GameCard(props: { type: string; date: string; players: any; }) {
 
   if(playersSortedByPoints[0].won === false) {
     playersSortedByPoints.reverse();
-    console.log("flipflop");
   }
 
   return (
@@ -19,9 +18,9 @@ function GameCard(props: { type: string; date: string; players: any; }) {
         <p>{date}</p>
       </header>
       
-      {playersSortedByPoints.map((player: { name: string; point: number; won: boolean; }) => {
+      {playersSortedByPoints.map((player: { name: string; point: number; won: boolean; }, index: number) => {
         return (
-          <section className={player.won ? 'won' : ''}>
+          <section className={player.won ? 'won' : ''} key={index}>
             <p>{player.name}</p> 
             <p>{player.point}</p>
           </section>
@@ -34,32 +33,3 @@ function GameCard(props: { type: string; date: string; players: any; }) {
 }
 
 export default GameCard;
-
-{/* <section className="gameCard">
-      <header>
-        <p>{data.games[0].type}</p> 
-        <p>{data.games[0].date}</p>
-      </header>
-
-      <section>
-        <p>{data.games[0].players[0].name}</p> 
-        <p>{data.games[0].players[0].point}</p>
-      </section>
-
-      <section>
-        <p>{data.games[0].players[3].name}</p> 
-        <p>{data.games[0].players[3].point}</p>
-      </section>
-
-      <section>
-        <p>{data.games[0].players[1].name}</p> 
-        <p>{data.games[0].players[1].point}</p>
-      </section>
-
-      <section>
-        <p>{data.games[0].players[2].name}</p> 
-        <p>{data.games[0].players[2].point}</p>
-      </section>
-
-      <p className="edit">Redigera matchen</p>
-    </section> */}

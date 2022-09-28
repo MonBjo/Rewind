@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import './search.scss';
 
-function Search() {
+function Search(props: { search: any; setSearch: any; }) {
+  const { search, setSearch } = props;
 
   function doSearch(event: any) {
-    console.log("Search:", event.target.value);
+    setSearch(event.target.value)
   }
 
   return (

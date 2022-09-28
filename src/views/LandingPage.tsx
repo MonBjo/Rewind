@@ -1,4 +1,5 @@
 import Header from '../componenets/Header';
+import Search from '../componenets/Search';
 import GameCard from '../componenets/GameCard';
 import data from '../assets/games.json';
 
@@ -17,7 +18,7 @@ function LandingPage() {
   return (
     <section className="LandingPage page">
       <Header />
-      <p>Landingpage</p>
+      <Search />
       {gamesSortedByDate.map((game: { type: string; date: string; players: any; }) => {
         return (
           <GameCard type={game.type} date={game.date} players={game.players} />

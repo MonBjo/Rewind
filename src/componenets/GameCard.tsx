@@ -4,23 +4,17 @@ import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 
 
 function GameCard(props: { type: string; date: string; players: any; }) {
   let {type, date, players} = props;
+  let playersSortedByPoints: any = players.sort((a: { point: number; }, b: { point: number; }) => a.point - b.point);
   // console.log("data", data);
   // console.log("props", props);
-  
-  // TODO: Create a function to put the winner/s at the top
-  // TODO: Create a function that sorts the players by points. 
-  //    If the winner has the highest score, sort from lowest to highest.
-  //    If the winner has the lowest score, sort from highest to lowest.
- 
-  let playersSortedByPoints: any = players.sort((a: { point: number; }, b: { point: number; }) => a.point - b.point);
-  console.log("playersSortedByPoints", playersSortedByPoints);
+  // console.log("playersSortedByPoints", playersSortedByPoints);
+
 
   if(playersSortedByPoints[0].won === false) {
     playersSortedByPoints.reverse();
     console.log("flipflop");
   }
-  
-  console.log("playersSortedByPoints", playersSortedByPoints);
+
 
   return (
     <section className="gameCard">
@@ -29,10 +23,9 @@ function GameCard(props: { type: string; date: string; players: any; }) {
         <p>{date}</p>
       </header>
       
-      {/* {playersSortedByPoints.map((player: { name: string; point: number; }) => { */}
-      {playersSortedByPoints.map((player: { name: string; point: number; }) => {
+      {playersSortedByPoints.map((player: { name: string; point: number; won: boolean; }) => {
         return (
-          <section>
+          <section className={player.won ? 'won' : ''}>
             <p>{player.name}</p> 
             <p>{player.point}</p>
           </section>

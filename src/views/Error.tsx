@@ -13,7 +13,7 @@ function Error() {
     <section className="errorPage page">
       <Header />
       <img src={confusedImg} />
-      <button onClick={ navHome } className="button button--error" >Go back to the games</button>
+      <button onClick={ navHome } className="button button--error" >Gå tillbaka</button>
     </section>
   );
 }

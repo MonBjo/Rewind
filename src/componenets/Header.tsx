@@ -1,16 +1,12 @@
 import './header.scss';
-import { useNavigate } from "react-router-dom";
+import icon from '../assets/icon.png';
 
 function Header() {
-  const navigate = useNavigate();
-
-  function navHome() {
-    navigate('/');
-  }
 
   return (
     <header className="header">
-      <p>Header</p>
+      <img src={icon} />
+      <h1>Dina spel samlade på en plats!</h1>
     </header>
   );
 }

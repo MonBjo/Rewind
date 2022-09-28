@@ -61,22 +61,22 @@
         {
           "name": "Samantha", 
           "won": false,
-          "point": 0,
+          "point": 4,
           "id": 0
         },{
           "name": "Jack", 
           "won": false,
-          "point": 0,
+          "point": 3,
           "id": 1
         },{
           "name": "Daniel", 
-          "won": false,
-          "point": 0,
+          "won": true,
+          "point": 6,
           "id": 2
         },{
           "name": "Teal'c", 
           "won": false,
-          "point": 0,
+          "point": 2,
           "id": 3
         }
       ],

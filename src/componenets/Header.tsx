@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
       <img src={icon} />
-      <h1>Dina spel samlade på en plats!</h1>
+      <h1>Dina matcher samlade på en plats!</h1>
     </header>
   );
 }

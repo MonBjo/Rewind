@@ -1,6 +1,4 @@
 import './gameCard.scss';
-import data from '../assets/games.json';
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
 
 function GameCard(props: { type: string; date: string; players: any; }) {
   let {type, date, players} = props;
@@ -9,12 +7,10 @@ function GameCard(props: { type: string; date: string; players: any; }) {
   // console.log("props", props);
   // console.log("playersSortedByPoints", playersSortedByPoints);
 
-
   if(playersSortedByPoints[0].won === false) {
     playersSortedByPoints.reverse();
     console.log("flipflop");
   }
-
 
   return (
     <section className="gameCard">

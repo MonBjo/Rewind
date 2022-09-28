@@ -103,18 +103,86 @@
       "date": "2022-09-01",
       "players": [
         {
-          "name": "Samantha", 
-          "won": false,
-          "point": 0,
+          "name": "Teal'c", 
+          "won": true,
+          "point": 1,
           "id": 0
         },{
           "name": "Daniel", 
-          "won": true,
-          "point": 1,
+          "won": false,
+          "point": 0,
           "id": 1
         }
       ],
       "id": 5
+    },{
+      "type": "Fotboll",
+      "date": "2022-08-04",
+      "players": [
+        {
+          "name": "SG1", 
+          "won": true,
+          "point": 4,
+          "id": 0
+        },{
+          "name": "SG2", 
+          "won": false,
+          "point": 1,
+          "id": 1
+        }
+      ],
+      "id": 6
+    },{
+      "type": "Fotboll",
+      "date": "2022-08-04",
+      "players": [
+        {
+          "name": "SG3", 
+          "won": false,
+          "point": 2,
+          "id": 0
+        },{
+          "name": "SG4", 
+          "won": true,
+          "point": 3,
+          "id": 1
+        }
+      ],
+      "id": 7
+    },{
+      "type": "Fotboll",
+      "date": "2022-08-05",
+      "players": [
+        {
+          "name": "SG2", 
+          "won": false,
+          "point": 0,
+          "id": 0
+        },{
+          "name": "SG3", 
+          "won": true,
+          "point": 2,
+          "id": 1
+        }
+      ],
+      "id": 8
+    },{
+      "type": "Fotboll",
+      "date": "2022-08-05",
+      "players": [
+        {
+          "name": "SG1", 
+          "won": true,
+          "point": 5,
+          "id": 0
+        },{
+          "name": "SG4", 
+          "won": false,
+          "point": 4,
+          "id": 1
+        }
+      ],
+      "id": 9
     }
   ]
 }

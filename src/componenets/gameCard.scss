@@ -8,8 +8,7 @@
   @include base.border-style;
   overflow: hidden;
   
-  display: flex;
-  flex-direction: column;
+  @include base.flex-a-column(stretch);
 
   header {
     background-color: base.$orage;

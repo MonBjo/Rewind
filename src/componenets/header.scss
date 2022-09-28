@@ -5,9 +5,7 @@
   background-color: base.$orage;
   padding: 0 10px;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @include base.flex-a-row;
   justify-content: space-around;
 
   img {

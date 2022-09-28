@@ -2,11 +2,10 @@
 
 .gameCard {
   width: 80%;
-  max-width: 500px;
+  max-width: 400px;
   box-shadow: 1px 1px 5px #00000072;
   margin: 20px 0;
-  border: 1px solid black;
-  border-radius: 5px;
+  @include base.border-style;
   overflow: hidden;
   
   display: flex;
@@ -25,7 +24,7 @@
   }
   .edit {
     font-style: italic;
-    color: gray;
+    color: #000000b2;
     text-align: right;
     padding: 10px 15px;
   }

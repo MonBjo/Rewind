@@ -2,3 +2,8 @@
 
 $green: #49C391;
 $orage: #FBBA85;
+
+@mixin border-style {
+  border: 1px solid black;
+  border-radius: 5px;
+}

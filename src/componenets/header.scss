@@ -1,5 +1,7 @@
+@use '../_base.scss';
+
 .header {
   width: 100vw;
-  background-color: lightgray;
+  background-color: base.$orage;
   padding: 10px;
 }

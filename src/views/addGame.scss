@@ -1,0 +1,21 @@
+.AddGamePage {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .playerInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    section {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import './App.scss';
 
 import LandingPage from "./views/LandingPage";
 import Error from "./views/Error";
+import AddGame from "./views/AddGame";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/*' element={<Error/>}/>
+        <Route path='/addgame' element={<AddGame/>}/>
       </Routes>
     </div>
   )

@@ -18,16 +18,10 @@ function AddGame() {
 
   function onSubmit(event: any){
     event.preventDefault();
-    console.log(event.target.form[0].id, ":", event.target.form[0].value);
-    console.log(event.target.form[1].id, ":", event.target.form[1].value);
-
-    console.log(event.target.form[2].id, ":", event.target.form[2].value);
-    console.log(event.target.form[3].id, ":", event.target.form[3].value);
-
-    console.log(event.target.form[4].id, ":", event.target.form[4].value);
-    console.log(event.target.form[5].id, ":", event.target.form[5].value);
-
-    console.log(event);
+    // console.log(event.target.form[i].value);
+    // console.log(event.target.form[i].id);
+    // TODO: Create game object
+    // TODO: Store game object in local storage
   }
 
   return (
@@ -40,7 +34,7 @@ function AddGame() {
         <input type="text" placeholder="Speltyp" id="type" />
         <input type="date" id="date" />
 
-        {/* TODO: Maybe simplify this function as 'counter' is unused */}
+        {/* TODO: Simplify this function as 'counter' is unused */}
         {Array.from(Array(counter)).map((counter: any, index) => {
           return (
             <section key={index} className="playerInput">

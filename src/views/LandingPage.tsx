@@ -2,7 +2,7 @@ import Header from '../componenets/Header';
 import Search from '../componenets/Search';
 import GameCard from '../componenets/GameCard';
 import data from '../assets/games.json';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function LandingPage() {
@@ -12,8 +12,9 @@ function LandingPage() {
 
   function navAddGame() {
     navigate('/AddGame');
-  }
+  } 
 
+  // TODO: Fetch game-data from localstorage
   let gamesSortedByDate: any = data.games.sort((a, b) => {
     if (a.date > b.date) {
       return -1;

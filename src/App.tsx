@@ -1,13 +1,16 @@
-import { useState } from 'react';
 import {Routes, Route} from 'react-router-dom';
 import './App.scss';
-
 import LandingPage from "./views/LandingPage";
 import Error from "./views/Error";
 import AddGame from "./views/AddGame";
+import { useEffect } from 'react';
+import initialGames from './assets/games.json';
 
 function App() {
-  const [count, setCount] = useState(0);
+  console.log(initialGames.games);
+  useEffect(() => {
+    initialGames.games.map(game => localStorage.setItem(JSON.stringify(game.id), JSON.stringify(game)));
+  });
 
   return (
     <div className="App">

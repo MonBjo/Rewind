@@ -4,12 +4,12 @@ import Header from '../componenets/Header';
 import './addGame.scss';
 
 function AddGame() {
-  const [counter, setCounter] = useState(2);
+  const [numberOfPlayers, setNumberOfPlayers] = useState(2);
   const navigate = useNavigate();
 
   const addInput = (event: any) => {
     event.preventDefault();
-    setCounter(counter + 1);
+    setNumberOfPlayers(numberOfPlayers + 1);
   }
 
   function navHome() {
@@ -18,11 +18,56 @@ function AddGame() {
 
   function onSubmit(event: any){
     event.preventDefault();
-    // console.log(event.target.form[i].value);
-    // console.log(event.target.form[i].id);
-    // TODO: Create game object
     // TODO: Store game object in local storage
+    // TODO: Fix the input value of won so it is an boolean
+    
+    let players: object[] = [];
+    // loop through number of players
+    for(let i = 0; i < numberOfPlayers; i++) {
+      console.log("i", i);
+      let newPlayer = {
+        "name": "noname", 
+        "point": 0,
+        "won": false
+      };
+
+      // loop through input values
+      // 'length - 2' to not include the two buttons ("add player" and "submit")
+      for(let j = 2; j < event.target.form.length - 2; j++) {
+        let inputValue = event.target.form[j].value;
+        let inputID = event.target.form[j].id;
+
+        console.log("j", j);
+        console.log(inputID, inputValue);
+
+        if(inputID == "name") {
+          newPlayer.name = inputValue;
+        } else if(inputID == "point") {
+          newPlayer.point = inputValue;
+        } else if(inputID == "won" + i) {
+          newPlayer.won = inputValue;
+          break;
+        } else {
+          console.log("Something odd is going on, the input id is: ", inputID, "I was expecting name, point or won.");
+        }
+        console.log("newPlayer", newPlayer);
+      }
+      players.push(newPlayer);
+      console.log("players", players);
+    }
+    
+    const newGame =  {
+      "type": event.target.form[0].value,
+      "date": event.target.form[1].value,
+      "players": players,
+      "id": localStorage.length
+    }
+    console.log("new game", newGame);
+    // TODO: get data from localstorage
+    // TODO: add 'newGame' to said data
+    // TODO: put data back into localstorage
   }
+
 
   return (
     <section className="AddGamePage page">
@@ -35,7 +80,7 @@ function AddGame() {
         <input type="date" id="date" />
 
         {/* TODO: Simplify this function as 'counter' is unused */}
-        {Array.from(Array(counter)).map((counter: any, index) => {
+        {Array.from(Array(numberOfPlayers)).map((counter: any, index) => {
           return (
             <section key={index} className="playerInput">
               <input type="text" placeholder="spelarnamn" id="name" />

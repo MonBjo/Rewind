@@ -6,23 +6,23 @@
       "players": [
         {
           "name": "Samantha", 
-          "won": true,
           "point": 5,
+          "won": true,
           "id": 0
         },{
           "name": "Jack", 
-          "won": false,
           "point": 4,
+          "won": false,
           "id": 1
           },{
           "name": "Daniel", 
-          "won": false,
           "point": 2,
+          "won": false,
           "id": 2
         },{
           "name": "Teal'c", 
-          "won": true,
           "point": 5,
+          "won": true,
           "id": 3
         }
       ],
@@ -33,23 +33,23 @@
       "players": [
         {
           "name": "Samantha", 
-          "won": false,
           "point": 1,
+          "won": false,
           "id": 0
         },{
           "name": "Jack", 
-          "won": false,
           "point": 1,
+          "won": false,
           "id": 1
           },{
           "name": "Daniel", 
-          "won": true,
           "point": 4,
+          "won": true,
           "id": 2
         },{
           "name": "Teal'c", 
-          "won": false,
           "point": 3,
+          "won": false,
           "id": 3
         }
       ],
@@ -60,23 +60,23 @@
       "players": [
         {
           "name": "Samantha", 
-          "won": false,
           "point": 1,
+          "won": false,
           "id": 0
         },{
           "name": "Jack", 
-          "won": false,
           "point": 4,
+          "won": false,
           "id": 1
         },{
           "name": "Daniel", 
-          "won": false,
           "point": 2,
+          "won": false,
           "id": 2
         },{
           "name": "Teal'c", 
-          "won": true,
           "point": 5,
+          "won": true,
           "id": 3
         }
       ],
@@ -87,23 +87,23 @@
       "players": [
         {
           "name": "Samantha", 
-          "won": false,
           "point": 4,
+          "won": false,
           "id": 0
         },{
           "name": "Jack", 
-          "won": false,
           "point": 3,
+          "won": false,
           "id": 1
         },{
           "name": "Daniel", 
-          "won": true,
           "point": 6,
+          "won": true,
           "id": 2
         },{
           "name": "Teal'c", 
-          "won": false,
           "point": 2,
+          "won": false,
           "id": 3
         }
       ],
@@ -114,13 +114,13 @@
       "players": [
         {
           "name": "Samantha", 
-          "won": false,
           "point": 0,
+          "won": false,
           "id": 0
         },{
           "name": "Daniel", 
-          "won": true,
           "point": 1,
+          "won": true,
           "id": 1
         }
       ],
@@ -131,13 +131,13 @@
       "players": [
         {
           "name": "Teal'c", 
-          "won": true,
           "point": 1,
+          "won": true,
           "id": 0
         },{
           "name": "Daniel", 
-          "won": false,
           "point": 0,
+          "won": false,
           "id": 1
         }
       ],
@@ -148,13 +148,13 @@
       "players": [
         {
           "name": "SG1", 
-          "won": true,
           "point": 4,
+          "won": true,
           "id": 0
         },{
           "name": "SG2", 
-          "won": false,
           "point": 1,
+          "won": false,
           "id": 1
         }
       ],
@@ -165,13 +165,13 @@
       "players": [
         {
           "name": "SG3", 
-          "won": false,
           "point": 2,
+          "won": false,
           "id": 0
         },{
           "name": "SG4", 
-          "won": true,
           "point": 3,
+          "won": true,
           "id": 1
         }
       ],
@@ -182,13 +182,13 @@
       "players": [
         {
           "name": "SG2", 
-          "won": false,
           "point": 0,
+          "won": false,
           "id": 0
         },{
           "name": "SG3", 
-          "won": true,
           "point": 2,
+          "won": true,
           "id": 1
         }
       ],
@@ -199,13 +199,13 @@
       "players": [
         {
           "name": "SG1", 
-          "won": true,
           "point": 5,
+          "won": true,
           "id": 0
         },{
           "name": "SG4", 
-          "won": false,
           "point": 4,
+          "won": false,
           "id": 1
         }
       ],

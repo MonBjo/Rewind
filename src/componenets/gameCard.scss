@@ -11,8 +11,8 @@
   @include base.flex-a-column(stretch);
 
   header {
-    background-color: base.$orage;
-    box-shadow: 0 2px 5px 2px base.$orage;
+    background-color: base.$orange;
+    box-shadow: 0 2px 5px 2px base.$orange;
     margin-bottom: 30px;
     :first-child {
       font-weight: bold;

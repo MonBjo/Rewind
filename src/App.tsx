@@ -7,7 +7,6 @@ import { useEffect } from 'react';
 import initialGames from './assets/games.json';
 
 function App() {
-  console.log(initialGames.games);
   useEffect(() => {
     initialGames.games.map(game => localStorage.setItem(JSON.stringify(game.id), JSON.stringify(game)));
   });

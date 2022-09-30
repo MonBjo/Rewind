@@ -20,8 +20,6 @@ function AddGame() {
     event.preventDefault();
     let games: any = JSON.parse(localStorage.games);
     let players: object[] = [];
-
-    // TODO: Fix the input value of won so it is an boolean
     
     // loop through number of players
     for(let i = 0; i < numberOfPlayers; i++) {
@@ -46,13 +44,14 @@ function AddGame() {
         } else if(inputID == "point") {
           newPlayer.point = inputValue;
         } else if(inputID == "won" + i) {
-          newPlayer.won = inputValue;
+          newPlayer.won = event.target.form[j].checked;
           break;
         } else {
           console.log("Something odd is going on, the input id is: ", inputID, "I was expecting name, point or won.");
         }
         console.log("newPlayer", newPlayer);
       }
+      
       players.push(newPlayer);
       console.log("players", players);
     }
@@ -65,6 +64,7 @@ function AddGame() {
     });
     
     localStorage.setItem("games", JSON.stringify(games));
+    navHome();
   }
 
   return (

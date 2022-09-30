@@ -7,8 +7,12 @@ import { useNavigate } from 'react-router-dom';
 
 function LandingPage() {
   const [search, setSearch] = useState('');
-  let games = JSON.parse(localStorage.games);
   const navigate = useNavigate();
+
+  let games = JSON.parse(localStorage.games);
+  let wins: number = 0;
+  let playerWin: string = "";
+  let winsOf: number = 10;
   
   
   function navAddGame() {
@@ -24,11 +28,7 @@ function LandingPage() {
       return 0;
     }
   });
-  
-  console.log("search", search);
-  let wins: number = 0;
-  let playerWins: string = "";
-  let winsOf: number = 10;
+
   gamesSortedByDate = gamesSortedByDate.filter((game: { players: any; type: string; date: string; }) => {
     if( game.type.toLowerCase().includes(search.toLowerCase()) || game.date.toLowerCase().includes(search.toLowerCase()) ) {
       return game;
@@ -43,15 +43,15 @@ function LandingPage() {
         if(winsOf > 1) {
           winsOf--;
         }
-        playerWins = player.name;
+        playerWin = player.name;
         return game;
       }
     }
   });
 
   function displayWins() {
-    if(playerWins && search.length > 1) {
-      const wonGames: string = playerWins + " har vunnit " + wins + " av " + winsOf + " matcher.";
+    if(playerWin && search.length > 1) {
+      const wonGames: string = playerWin + " har vunnit " + wins + " av " + winsOf + " matcher.";
       console.log(wonGames);
       return wonGames;
     }

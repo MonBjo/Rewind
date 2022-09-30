@@ -1,8 +1,7 @@
 import Header from '../componenets/Header';
 import Search from '../componenets/Search';
 import GameCard from '../componenets/GameCard';
-import data from '../assets/games.json';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function LandingPage() {
@@ -12,8 +11,8 @@ function LandingPage() {
   let games = JSON.parse(localStorage.games);
   let wins: number = 0;
   let playerWin: string = "";
-  let winsOf: number = 10;
-  
+  let winsOf: number = 0;
+  let winsOfMax: number = 10;
   
   function navAddGame() {
     navigate('/AddGame');
@@ -36,13 +35,21 @@ function LandingPage() {
 
     for(let player of game.players) {
       if (player.name.toLowerCase().includes(search.toLowerCase())) {
-        console.log("player.name",player.name);
+        
+        // if(player.won && player.name.toLowerCase() == search.toLowerCase()) {
         if(player.won) {
           wins++;
         }
-        if(winsOf > 1) {
-          winsOf--;
+        // if(winsOf < winsOfMax && player.name.toLowerCase() == search.toLowerCase()) {
+        if(winsOf < winsOfMax) {
+          winsOf++;
         }
+
+        // Debug data
+        // console.log("wins", wins);
+        // console.log("winsOf", winsOf);
+        // console.log("player.name",player.name);
+        
         playerWin = player.name;
         return game;
       }
@@ -50,10 +57,14 @@ function LandingPage() {
   });
 
   function displayWins() {
-    if(playerWin && search.length > 1) {
-      const wonGames: string = playerWin + " har vunnit " + wins + " av " + winsOf + " matcher.";
-      console.log(wonGames);
-      return wonGames;
+    if(playerWin.toLowerCase() == search.toLowerCase() || playerWin.length > 3) {
+      return (
+        <section>
+          <p>{playerWin} har vunnit {wins} av dom {winsOf} senaste matcherna.</p> 
+          <label htmlFor="winsOnly" >Visa endast vinster: </label>
+          <input type="checkbox" id="winsOnly" />
+        </section>
+      );
     }
   }
     
@@ -62,7 +73,7 @@ function LandingPage() {
       <Header />
       <Search search={search} setSearch={setSearch} />
       <button onClick={ navAddGame }>Lägg till ny match</button>
-      <p>{displayWins()}</p>
+      {displayWins()}
       {gamesSortedByDate.map((game: { type: string; date: string; players: any; }, index: number) => {
         return (
           <GameCard type={game.type} date={game.date} players={game.players} key={index} />

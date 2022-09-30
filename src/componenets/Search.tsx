@@ -5,7 +5,8 @@ function Search(props: { search: any; setSearch: any; }) {
   const { search, setSearch } = props;
 
   function doSearch(event: any) {
-    setSearch(event.target.value)
+    console.log(event.target.value.toLowerCase());
+    setSearch(event.target.value.toLowerCase());
   }
 
   return (

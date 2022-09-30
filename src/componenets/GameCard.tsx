@@ -27,7 +27,7 @@ function GameCard(props: { type: string; date: string; players: any; }) {
         )
       })}
 
-      <p className="edit">Redigera matchen</p>
+      {/* <p className="edit">Redigera matchen</p> */}
     </section>
   );
 }

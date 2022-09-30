@@ -10,7 +10,7 @@ function Search(props: { search: any; setSearch: any; }) {
 
   return (
     <section className="search">
-      <input type="text" placeholder='Sök på namn' onChange={doSearch} />
+      <input type="text" placeholder='Sök på namn, datum eller match-typ' onChange={doSearch} />
     </section>
   );
 }

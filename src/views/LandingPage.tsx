@@ -7,15 +7,16 @@ import { useNavigate } from 'react-router-dom';
 
 function LandingPage() {
   const [search, setSearch] = useState('');
-  console.log("search", search);
+  let games = JSON.parse(localStorage.games);
   const navigate = useNavigate();
+  
+  console.log("search", search);
 
   function navAddGame() {
     navigate('/AddGame');
   } 
 
-  // TODO: Fetch game-data from localstorage
-  let gamesSortedByDate: any = data.games.sort((a, b) => {
+  let gamesSortedByDate: any = games.games.sort((a: { date: number; }, b: { date: number; }) => {
     if (a.date > b.date) {
       return -1;
     }

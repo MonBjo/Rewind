@@ -1,21 +1,29 @@
 @use '../_base.scss';
 
 .AddGamePage {
+  
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 
+    @include base.content-width;
+    
     input {
+      width: 100%;
       padding: 5px 15px;
     }
   }
 
   .playerInput {
+    width: 100%;
     @include base.flex-a-column;
     gap: 5px;
 
+    p {
+      margin-right: auto;
+    }
     section {
       @include base.flex-a-row;
       gap: 5px;

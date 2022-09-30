@@ -8,6 +8,11 @@ $orange: #FBBA85;
   border-radius: 5px;
 }
 
+@mixin content-width {
+  width: 80%;
+  max-width: 400px;
+}
+
 @mixin flex-a-row($align: center) {
   display: flex;
   flex-direction: row;

@@ -81,8 +81,11 @@ function AddGame() {
         {Array.from(Array(numberOfPlayers)).map((counter: any, index) => {
           return (
             <section key={index} className="playerInput">
+              <p>Spelare {index+1}</p>
+              
               <input type="text" placeholder="spelarnamn" id="name" />
               <input type="number" placeholder="poäng" id="point" />
+              
               <section>
                 <label htmlFor={"won" + index}>Vann: </label>
                 <input type="checkbox" id={"won" + index} />

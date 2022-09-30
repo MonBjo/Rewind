@@ -1,8 +1,7 @@
 @use '../_base.scss';
 
 .gameCard {
-  width: 80%;
-  max-width: 400px;
+  @include base.content-width;
   box-shadow: 1px 1px 5px #00000072;
   margin: 20px 0;
   @include base.border-style;

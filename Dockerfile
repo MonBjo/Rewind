@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-WORKDIR /dist
+WORKDIR /app
 
 RUN npm install -g http-server
 

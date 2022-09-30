@@ -18,10 +18,11 @@ function AddGame() {
 
   function onSubmit(event: any){
     event.preventDefault();
-    // TODO: Store game object in local storage
+    let games: any = JSON.parse(localStorage.games);
+    let players: object[] = [];
+
     // TODO: Fix the input value of won so it is an boolean
     
-    let players: object[] = [];
     // loop through number of players
     for(let i = 0; i < numberOfPlayers; i++) {
       console.log("i", i);
@@ -56,18 +57,15 @@ function AddGame() {
       console.log("players", players);
     }
     
-    const newGame =  {
+    games.games.push({
       "type": event.target.form[0].value,
       "date": event.target.form[1].value,
       "players": players,
-      "id": localStorage.length
-    }
-    console.log("new game", newGame);
-    // TODO: get data from localstorage
-    // TODO: add 'newGame' to said data
-    // TODO: put data back into localstorage
+      "id": games.length
+    });
+    
+    localStorage.setItem("games", JSON.stringify(games));
   }
-
 
   return (
     <section className="AddGamePage page">
